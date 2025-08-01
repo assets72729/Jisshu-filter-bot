@@ -96,7 +96,7 @@ FILE_CAPTION = environ.get('FILE_CAPTION', f'{script.FILE_CAPTION}')
 IMDB_TEMPLATE = environ.get('IMDB_TEMPLATE', f'{script.IMDB_TEMPLATE_TXT}')
 LONG_IMDB_DESCRIPTION = is_enabled('LONG_IMDB_DESCRIPTION', False)
 PROTECT_CONTENT = is_enabled('PROTECT_CONTENT', False)
-SPELL_CHECK = is_enabled('SPELL_CHECK', False)
+SPELL_CHECK = is_enabled('SPELL_CHECK', True)
 LINK_MODE = is_enabled('LINK_MODE', False)
 TMDB_API_KEY = environ.get("TMDB_API_KEY", "")
 
@@ -110,7 +110,7 @@ if 'DYNO' in environ:
     ON_HEROKU = True
 else:
     ON_HEROKU = False
-URL = environ.get("FQDN", "")
+URL = environ.get("FQDN", "https://retired-jenn-scenestealer-2a0f4047.koyeb.app/")
 
 # Commands
 admin_cmds = [
